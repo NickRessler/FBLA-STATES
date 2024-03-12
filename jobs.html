@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Delius">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=BioRhyme">
+    <link rel="stylesheet" href="style.css">
+    <title>Job Openings</title>
+</head>
+<body>
+    <div class="nav-container">
+        <nav class="navbar">
+            <a href="index.html"><h1 id="logo">FlexaFit</h1></a>
+            <div class="hamburger" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-links">Home</a></li>
+                <li><a href="about.html" class="nav-links">About Us</a></li>
+                <li><a href="jobs.html" class="nav-links" style="color: #4d4dff;">Jobs</a></li>
+                <li><a href="#" class="nav-links">Benefits</a></li>
+                <li><a href="#" class="nav-links">Contact Us</a></li>
+                <li><a href="#" class="nav-links nav-links-btn">Apply Now</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="jobs-container">
+        <h1>Job Openings</h1>
+        <div class="job-filter">
+            <p>Select A Location</p>
+            <select id="locations" onchange="jobFilter()">
+                <option value="all">All</option>
+                <option value="easton">Easton</option>
+                <option value="bethlehem">Bethlehem</option>
+                <option value="nazareth">Nazareth</option>
+            </select>
+        </div>
+        <div class="job-list">
+            <div class="job" id="job1" onclick="changePage('page1')"> 
+                <span class="job-titles">
+                    <h3>Personal Trainer</h3>
+                    <p>Open</p>
+                </span>
+                <a href="about.html"><button class="apply-btn">Apply</button></a>
+                <span class="job-skills">
+                    <p>Communication</p>
+                    <p>Knowledge</p>
+                    <p>Patience</p>
+                </span>
+                <p class="salary">Salary $40k-$70k</p>
+            </div>
+            <div class="job" id="job2" onclick="location.href='job-info.html';">
+                <span class="job-titles">
+                    <h3>Dietitian</h3>
+                    <p>Open</p>
+                </span>
+                <a href="about.html"><button class="apply-btn">Apply</button></a>
+                <span class="job-skills">
+                    <p>Communication</p>
+                    <p>Knowledge</p>
+                    <p>Nutrition Expertise</p>
+                </span>
+                <p class="salary">Salary $30k-$60k</p>
+            </div>
+            <div class="job" id="job3" onclick="location.href='job-info.html';">
+                <span class="job-titles">
+                    <h3>Secretary</h3>
+                    <p>Open</p>
+                </span>
+                <a href="about.html"><button class="apply-btn">Apply</button></a>
+                <span class="job-skills">
+                    <p>Communication</p>
+                    <p>Multitasking</p>
+                    <p>Organization</p>
+                </span>
+                <p class="salary">Salary $30k-$50k</p>
+            </div>
+            <div class="job" id="job4" onclick="location.href='job-info.html';">
+                <span class="job-titles">
+                    <h3>Marketing Specialist</h3>
+                    <p>Open</p>
+                </span>
+                <a href="about.html"><button class="apply-btn">Apply</button></a>
+                <span class="job-skills">
+                    <p>Creativity</p>
+                    <p>Analytical Skills</p>
+                    <p>Communication</p>
+                </span>
+                <p class="salary">Salary $40k-$80k</p>
+            </div>
+            <div class="job" id="job5" onclick="location.href='job-info.html';">
+                <span class="job-titles">
+                    <h3>Blogger/Content Creator</h3>
+                    <p>Open</p>
+                </span>
+                <a href="about.html"><button class="apply-btn">Apply</button></a>
+                <span class="job-skills">
+                    <p>Writing Skills</p>
+                    <p>Editing Skills</p>
+                    <p>Passion</p>
+                </span>
+                <p class="salary">Salary $30k-$70k</p>
+            </div>
+            <div class="job" id="job6" onclick="location.href='job-info.html';">
+                <span class="job-titles">
+                    <h3>Physical Therapist</h3>
+                    <p>Open</p>
+                </span>
+                <a href="about.html"><button class="apply-btn">Apply</button></a>
+                <span class="job-skills">
+                    <p>Communication</p>
+                    <p>Knowledge</p>
+                    <p>Empathy</p>
+                </span>
+                <p class="salary">Salary $60k-$90k</p>
+            </div>
+            <div class="job" id="job7" onclick="location.href='job-info.html';">
+                <span class="job-titles">
+                    <h3>Facility Manager</h3>
+                    <p>Open</p>
+                </span>
+                <a href="about.html"><button class="apply-btn">Apply</button></a>
+                <span class="job-skills">
+                    <p>Communication</p>
+                    <p>Leadership</p>
+                    <p>Problem Solving</p>
+                </span>
+                <p class="salary">Salary $70k-$110k</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function changePage(pageId) {
+            // Change the page
+            window.location.href = "job-info.html"; 
+            
+            if (pageId === 'page1') {
+                document.getElementById('jobPosition').innerText = "This is information for Page 1.";
+            } else if (pageId === 'page2') {
+                document.getElementById('jobPosition').innerHTML = "This is information for Page 2.";
+            }
+        }
+    </script>
+    <script src="index.js"></script>
+</body>
+</html>
